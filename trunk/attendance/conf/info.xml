@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+    <title xml:lang="ko">출석부</title>
+    <description xml:lang="ko">출석부</description>
+    <version>1.6.2</version>
+    <date>2011-11-05</date>
+    <category>statistics</category>
+    <author email_address="pppljh@gmail.com" link="http://maesiltea.linuxstudy.pe.kr">
+        <name xml:lang="ko">매실茶</name>
+    </author>
+</module>
