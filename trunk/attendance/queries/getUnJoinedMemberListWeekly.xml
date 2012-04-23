@@ -21,6 +21,7 @@
             <condition operation="like" column="member.nick_name" var="s_nick_name" pipe="or" />
             <condition operation="like" column="member.user_name" var="s_user_name" pipe="or" />
             <condition operation="like" column="member.user_id" var="s_user_id" pipe="or"/>
+            <condition operation="like" column="member.email_address" var="s_email_address" pipe="or" />
         </group>
     </conditions>
 

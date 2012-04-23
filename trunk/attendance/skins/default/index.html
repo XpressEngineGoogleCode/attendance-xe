@@ -1,5 +1,5 @@
 <!--#include("./_header.html")-->
-<!--%import("js/at.js")-->
+<!--%import("./js/at.js")-->
 <!--%import("filter/insert_attendance.xml")-->
 {@$year=substr($selected_date,0,4)}
 {@$month=substr($selected_date,4,2)}
@@ -112,7 +112,6 @@
             <td style="width:30px; ">{$lang->position}</td>
             <td>{$lang->greetings}</td>
             <td style="width:80px; ">{$lang->nick_name}</td>
-            <!--@if($module_info->display_username == 'Y')--><td style="width:80px;">{$lang->user_name}</td><!--@end-->
             <!--@if($module_info->display_user_id == 'Y')--><td style="width:80px;">{$lang->user_id}</td><!--@end-->
             <td style="width:60px; ">{$lang->time}</td>
             <td style="width:100px;">{$lang->today_added_point}</td>
@@ -161,10 +160,9 @@
                     <!--@end-->
                 </td>
                 <td style="width:80px;"><div class="member_{$member->member_srl}">{$member->nick_name}</div></td>
-                <!--@if($module_info->display_username == 'Y')--><td style="width:80px;">{$member->user_name}</td><!--@end-->
                 <!--@if($module_info->display_user_id == 'Y')--><td style="width:80px;">{$member->user_id}</td><!--@end-->
                 <td style="width:60px; text-align:center;">{substr($data->regdate,8,2).":".substr($data->regdate,10,2).":".substr($data->regdate,12,2)}</td>
-                <td style="width:100px; text-align:center; "><!--@if($module_info->display_bonus=='Y')--><a onclick="bonusView('bonus_{$member->member_srl}')" href="#bonus_{$member->member_srl}"><!--@end-->{$data->today_point}<!--@if($module_info->display_bonus=='Y')--></a><!--@end--></td>
+                <td style="width:100px; text-align:center; "><!--@if($module_info->display_bonus_button=='Y')--><a onclick="bonusView('bonus_{$member->member_srl}')" href="#bonus_{$member->member_srl}"><!--@end-->{$data->today_point}<!--@if($module_info->display_bonus_button=='Y')--></a><!--@end--></td>
                 <!--@if($module_info->display_ip_address == 'Y')-->
                 <td style="width:100px; text-align:center;">
                     <!--@if($data->ipaddress == 'none')-->
@@ -185,9 +183,9 @@
             </tr>
             </tbody>
             </table>
-            <!--@if($module_info->display_bonus=='Y')-->
+            <!--@if($module_info->display_bonus_button=='Y')-->
             <div class="at_greetings" id="bonus_{$member->member_srl}">
-			        <!--@if($member->user_id)-->
+			        <!--@if($member->email_address)-->
                     <ul>
                         <li>{$lang->attendance_add_point} : {$config_data->add_point}</li>
 		                <!--@if($position==1 && $data->greetings!='^admin_checked^')-->

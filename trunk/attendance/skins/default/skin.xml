@@ -28,8 +28,8 @@
         Attendance Default Skin
         Written by maesiltea (http://maesiltea.linuxstudy.pe.kr)
     </description>
-    <version>0.1</version>
-    <date>2009-12-12</date>
+    <version>0.2</version>
+    <date>2012-04-23</date>
 
     <author email_address="pppljh@gmail.com" link="http://maesiltea.linuxstudy.pe.kr">
         <name xml:lang="ko">매실茶</name>
@@ -37,7 +37,7 @@
         <name xml:lang="jp">maesiltea</name>
     </author>
 
-    <license>BSD/LGPL2 Dual</license>
+    <license>LGPL2</license>
 
     <colorset>
         <color name="gray" src="screenshots/gray.jpg">
@@ -69,6 +69,26 @@
     </colorset>
 
     <extra_vars>
+        <var name="display_bonus_button" type="select">
+            <title xml:lang="ko">보너스 항목 표시</title>
+            <title xml:lang="en">Display Bonus List</title>
+            <options value="Y">
+                <title xml:lang="ko">출력</title>
+                <title xml:lang="en">display</title>
+                <title xml:lang="jp">表示</title>
+                <title xml:lang="zh-CN">显示</title>
+                <title xml:lang="es">display</title>
+                <title xml:lang="zh-TW">顯示</title>
+            </options>
+            <options value="N">
+                <title xml:lang="ko">출력하지 않음</title>
+                <title xml:lang="en">not display</title>
+                <title xml:lang="jp">非表示</title>
+                <title xml:lang="zh-CN">不显示</title>
+                <title xml:lang="es">not display</title>
+                <title xml:lang="zh-TW">隱藏</title>
+            </options>
+        </var>
         <var name="display_setup_button" type="select">
             <title xml:lang="ko">설정 표시</title>
             <title xml:lang="zh-CN">显示管理设置组</title>
@@ -156,31 +176,6 @@
             <title xml:lang="en">Display user id</title>
             <title xml:lang="es">Display user id</title>
             <title xml:lang="zh-TW">Display user id</title>
-            <options value="N">
-                <title xml:lang="ko">출력하지 않음</title>
-                <title xml:lang="en">not display</title>
-                <title xml:lang="jp">非表示</title>
-                <title xml:lang="zh-CN">不显示</title>
-                <title xml:lang="es">not display</title>
-                <title xml:lang="zh-TW">隱藏</title>
-            </options>
-            <options value="Y">
-                <title xml:lang="ko">출력</title>
-                <title xml:lang="en">display</title>
-                <title xml:lang="jp">表示</title>
-                <title xml:lang="zh-CN">显示</title>
-                <title xml:lang="es">display</title>
-                <title xml:lang="zh-TW">顯示</title>
-            </options>
-            <description />
-        </var>
-        <var name="display_username" type="select">
-            <title xml:lang="ko">이름 표시</title>
-            <title xml:lang="jp">Display user name</title>
-            <title xml:lang="zh-CN">Display user name</title>
-            <title xml:lang="en">Display user name</title>
-            <title xml:lang="es">Display user name</title>
-            <title xml:lang="zh-TW">Display user name</title>
             <options value="N">
                 <title xml:lang="ko">출력하지 않음</title>
                 <title xml:lang="en">not display</title>

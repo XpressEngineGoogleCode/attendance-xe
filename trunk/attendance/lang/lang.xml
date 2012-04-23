@@ -507,5 +507,4 @@
 	<item name = "attend_allow_duplicaton_ip_msg">
 		<value xml:lang="ko"><![CDATA[회 (기본값:3회)<br/>포인트 선물기능이 있는 홈페이지의 경우, 악의적인 방법으로 출석포인트를 획득할 수 있어 같은ip의 사용자는 출석횟수를 제한하도록 합니다.]]></value>
 	</item>
-
 </lang>
