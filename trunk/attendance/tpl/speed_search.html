@@ -22,6 +22,7 @@
         <select name="search_target">
 		<option value="" <!--@if(!$search_target)-->selected="selected"<!--@end-->>{$lang->search_target}</option>
 		<option value="user_id" <!--@if($search_target=='user_id')-->selected="selected"<!--@end-->>{$lang->user_id}</option>
+        <option value="email_address" <!--@if($search_target=='user_id')-->selected="selected"<!--@end-->>{$lang->email}</option>
 		<!--option value="user_name" <!--@if($search_target=='user_name')-->selected="selected"<!--@end-->>{$lang->user_name}</option-->
 		<option value="nick_name" <!--@if($search_target=='nick_name')-->selected="selected"<!--@end-->>{$lang->nick_name}</option>
         </select>
@@ -80,7 +81,7 @@
 	</td>
 </tr>
 <tr>
-	<td class="center" colspan="3">
+	<td class="center" colspan="2">
 			{$lang->yearly_info}({$year})
 	</td>
 	<td style="min-width:200px;">
@@ -108,7 +109,7 @@
 	</td>
 </tr>
 <tr>
-	<td class="center" colspan="3">
+	<td class="center" colspan="2">
 			{$lang->monthly_info}({$year.'-'.$month})
 	</td>
 	<td style="min-width:200px;">
@@ -128,7 +129,7 @@
 	</td>
 </tr>
 <tr>
-	<td class="center" colspan="3">
+	<td class="center" colspan="2">
 			{$lang->weekly_info}({substr($week->monday,0,4).'-'.substr($week->monday,4,2).'-'.substr($week->monday,6,2)} ~ {substr($week->sunday,0,4).'-'.substr($week->sunday,4,2).'-'.substr($week->sunday,6,2)})
 	</td>
 	<td style="min-width:200px;">
@@ -148,7 +149,7 @@
 	</td>
 </tr>
 <tr>
-	<td class="center" colspan="3">
+	<td class="center" colspan="2">
 		{$lang->attend_attended_time} : {substr($total_info->regdate,0,4).'-'.substr($total_info->regdate,4,2).'-'.substr($total_info->regdate,6,2)} {substr($total_info->regdate,8,2)}:{substr($total_info->regdate,10,2)}
 	</td>
 	<td class="center">
