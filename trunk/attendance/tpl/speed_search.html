@@ -38,7 +38,7 @@
 <table cellspacing="0" class="rowTable" >
 	<tr>
 		<th class="center">
-			{$lang->user_id}
+			{$lang->email}
 		</th>
 		<th class="center">
 			{$lang->nick_name}
@@ -55,7 +55,8 @@
 	</tr>
 <tr>
 	<td class="center" width="12%"> 
-		{@$user_info = $oMemberModel->getMemberInfoByMemberSrl($val2->member_srl)}{$user_info->user_id}
+		{@$user_info = $oMemberModel->getMemberInfoByMemberSrl($val2->member_srl)}
+        {$user_info->email_address}
 	</td>
 	<td class="center" width="12%"> 
 		<div class="member_{$user_info->member_srl}">{$user_info->nick_name}</div>
