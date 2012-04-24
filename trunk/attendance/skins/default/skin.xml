@@ -37,7 +37,7 @@
         <name xml:lang="jp">maesiltea</name>
     </author>
 
-    <license>LGPL2</license>
+    <license>GPL2</license>
 
     <colorset>
         <color name="gray" src="screenshots/gray.jpg">

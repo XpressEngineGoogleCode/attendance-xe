@@ -168,11 +168,11 @@ class attendanceAdminView extends attendance{
 
         // 공통 모듈 권한 설정 페이지 호출
         $oModuleAdminModel = &getAdminModel('module');
-        $skin_content = $oModuleAdminModel->getModuleSkinHTML($module_info->module_srl);
+        $skin_content = $oModuleAdminModel->getModuleSkinHTML($this->module_info->module_srl);
         Context::set('skin_content', $skin_content);
-        Context::set('module_info', $module_info);
+        /*Context::set('module_info', $module_info);
         Context::set('module_srl', $module_info->module_srl);
-        Context::set('mid', $module_info->mid);
+        Context::set('mid', $module_info->mid);*/
 
 		/*템플릿 설정*/
 		$this->setTemplatePath($this->module_path.'tpl');
