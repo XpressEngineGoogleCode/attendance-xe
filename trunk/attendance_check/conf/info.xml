@@ -2,8 +2,8 @@
 <widget version="0.2">
     <title xml:lang="ko">출석부</title>
     <description xml:lang="ko">출석부 위젯입니다.</description>
-    <version>1.6.1</version>
-    <date>2011-11-04</date>
+    <version>1.6.2</version>
+    <date>2012-05-08</date>
     <author email_address="pppljh@gmail.com" link="http://maesiltea.linuxstudy.pe.kr">
         <name xml:lang="ko">매실茶</name>
     </author>
