@@ -207,6 +207,11 @@
 			        </form>
                 <!--@end-->
             <!--@end-->
+        <!--@elseif($is_available ==1)-->
+            <!--//출석불가능 시간대 설명-->
+            <div class="att_denied">
+                {$lang->attend_banned_time} ({substr($config_data->start_time,0,2)}:{substr($config_data->start_time,2,2)}~{substr($config_data->end_time,0,2)}:{substr($config_data->end_time, 2,2)})
+            </div>
 	    <!--@end-->
     <!--@end-->
 <!--@end-->

@@ -43,3 +43,5 @@
 .attendanceTable .lines:hover { background:#d0d0d0; }
 .attendanceTable .bold {  font-size:12px; }
 .attendanceTable .center {text-align:center;}
+
+.att_denied {text-align:center; width:100%; font-size:1.2em; color:#ff0000;}
