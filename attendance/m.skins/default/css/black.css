@@ -45,3 +45,5 @@
 .point_list { margin:5px; padding:5px 5px; border:1px dashed #000000; color:#000000; display:none; font:.9em; overflow:hidden; }
 .point_list ul { padding:4px; margin:0; list-style-type:none; }
 .calendar_view { padding:5px; color:#000000; display:none; }
+
+.attendance_denied {text-align:center; width:100%; font-size:1.2em; color:#ff0000;}
