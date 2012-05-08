@@ -35,6 +35,11 @@
                     </div>
                 <!--@end-->
             <!--@end-->
+        <!--@elseif($is_available == 1)-->
+            <!--//출석불가능 시간대 설명-->
+            <div class="attendance_denied">
+                {$lang->attend_banned_time} ({substr($config_data->start_time,0,2)}:{substr($config_data->start_time,2,2)}~{substr($config_data->end_time,0,2)}:{substr($config_data->end_time, 2,2)})
+            </div>
 	    <!--@end-->
     <!--@end-->
 
@@ -187,6 +192,9 @@
             <div class="at_greetings" id="bonus_{$member->member_srl}">
 			        <!--@if($member->email_address)-->
                     <ul>
+                        {$selected_date}
+                        {$data->member_srl}
+                        {$oAttendanceModel->checkWeeklyDiligence($data->member_srl, 1, $selected_date)}
                         <li>{$lang->attendance_add_point} : {$config_data->add_point}</li>
 		                <!--@if($position==1 && $data->greetings!='^admin_checked^')-->
 			                <li>{$lang->attendance_first_point} : {$config_data->first_point}</li>

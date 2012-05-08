@@ -54,3 +54,5 @@
 .point_list ul { padding:4px; margin:0; list-style-type:none; float:left; width:45%;}
 
 .calendar_view { padding:5px 5px; color:#000000; display:none; float:right; width:45%;}
+
+.attendance_denied {text-align:center; width:100%; font-size:1.2em; color:#ff0000;}
