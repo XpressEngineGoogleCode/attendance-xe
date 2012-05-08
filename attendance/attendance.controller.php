@@ -49,31 +49,31 @@ class attendanceController extends attendance {
         $oModuleController = &getController('module');
 		//설정값이 저장되어있지 않다면
 		if((int)$output->data->count == 0){
-        $obj = Context::getRequestVars();
-        $obj->start_time = sprintf("%02d%02d",$obj->start_hour,$obj->start_min);
-        $obj->end_time = sprintf("%02d%02d",$obj->end_hour,$obj->end_min);
-        if($obj->continuity_day < 2){ $obj->continuity_day = 2; }
-        if($obj->diligence_yearly >= $end_of_year || $obj->diligence_yearly < 32) { $obj->diligence_yearly = $end_of_year - 1; }
-        if($obj->diligence_monthly >= $end_of_month || $obj->diligence_monthly < 8) { $obj->diligence_monthly = $end_of_month - 1; }
-        if($obj->diligence_weekly >= 7 || $obj->diligence_weekly < 1) { $obj->diligence_weekly = 6; }
-        $config->about_admin_check = $obj->about_admin_check;
-        $config->allow_duplicaton_ip_count = $obj->allow_duplicaton_ip_count;
-        $config->about_auto_attend = $obj->about_auto_attend;
-        $oModuleController->insertModuleConfig('attendance', $config);
-        executeQuery("attendance.insertConfig", $obj);
+            $obj = Context::getRequestVars();
+            $obj->start_time = sprintf("%02d%02d",$obj->start_hour,$obj->start_min);
+            $obj->end_time = sprintf("%02d%02d",$obj->end_hour,$obj->end_min);
+            if($obj->continuity_day < 2){ $obj->continuity_day = 2; }
+            if($obj->diligence_yearly >= $end_of_year || $obj->diligence_yearly < 32) { $obj->diligence_yearly = $end_of_year - 1; }
+            if($obj->diligence_monthly >= $end_of_month || $obj->diligence_monthly < 8) { $obj->diligence_monthly = $end_of_month - 1; }
+            if($obj->diligence_weekly >= 7 || $obj->diligence_weekly < 1) { $obj->diligence_weekly = 6; }
+            $config->about_admin_check = $obj->about_admin_check;
+            $config->allow_duplicaton_ip_count = $obj->allow_duplicaton_ip_count;
+            $config->about_auto_attend = $obj->about_auto_attend;
+            $oModuleController->insertModuleConfig('attendance', $config);
+            executeQuery("attendance.insertConfig", $obj);
         }else{
-        $obj = Context::getRequestVars();
-        if($obj->continuity_day < 2){ $obj->continuity_day = 2; }
-        if($obj->diligence_yearly >= $end_of_year || $obj->diligence_yearly < 32) { $obj->diligence_yearly = $end_of_year - 1; }
-        if($obj->diligence_monthly >= $end_of_month || $obj->diligence_monthly < 8) { $obj->diligence_monthly = $end_of_month - 1; }
-        if($obj->diligence_weekly >= 7 || $obj->diligence_weekly < 1) { $obj->diligence_weekly = 6; }
-        $obj->start_time = sprintf("%02d%02d",$obj->start_hour,$obj->start_min);
-        $obj->end_time = sprintf("%02d%02d",$obj->end_hour,$obj->end_min);
-        $config->about_admin_check = $obj->about_admin_check;
-        $config->allow_duplicaton_ip_count = $obj->allow_duplicaton_ip_count;
-        $config->about_auto_attend = $obj->about_auto_attend;
-        $oModuleController->insertModuleConfig('attendance', $config);
-        executeQuery("attendance.updateConfig", $obj);
+            $obj = Context::getRequestVars();
+            if($obj->continuity_day < 2){ $obj->continuity_day = 2; }
+            if($obj->diligence_yearly >= $end_of_year || $obj->diligence_yearly < 32) { $obj->diligence_yearly = $end_of_year - 1; }
+            if($obj->diligence_monthly >= $end_of_month || $obj->diligence_monthly < 8) { $obj->diligence_monthly = $end_of_month - 1; }
+            if($obj->diligence_weekly >= 7 || $obj->diligence_weekly < 1) { $obj->diligence_weekly = 6; }
+            $obj->start_time = sprintf("%02d%02d",$obj->start_hour,$obj->start_min);
+            $obj->end_time = sprintf("%02d%02d",$obj->end_hour,$obj->end_min);
+            $config->about_admin_check = $obj->about_admin_check;
+            $config->allow_duplicaton_ip_count = $obj->allow_duplicaton_ip_count;
+            $config->about_auto_attend = $obj->about_auto_attend;
+            $oModuleController->insertModuleConfig('attendance', $config);
+            executeQuery("attendance.updateConfig", $obj);
 		}
 		
 	}
